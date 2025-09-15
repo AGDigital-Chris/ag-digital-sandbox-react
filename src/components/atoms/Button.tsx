@@ -1,5 +1,5 @@
 import React from 'react';
-import type { BaseComponentProps, ButtonVariant, ButtonSize } from '../../types';
+import type { BaseComponentProps, ButtonSize } from '../../types';
 
 interface ButtonProps extends BaseComponentProps {
   variant?: 'primary' | 'secondary' | 'primary-light' | 'primary-dark' | 'secondary-light' | 'secondary-dark' | 'outline-light' | 'outline-dark' | 'ghost-light' | 'ghost-dark' | 'outline' | 'ghost';

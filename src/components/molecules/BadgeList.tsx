@@ -1,9 +1,10 @@
 import React from 'react';
 import Badge from '../atoms/Badge';
+import type { BadgeVariant } from '../../types';
 
 interface BadgeItem {
   text: string;
-  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'gold';
+  variant?: BadgeVariant;
 }
 
 interface BadgeListProps {
