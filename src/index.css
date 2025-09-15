@@ -1,0 +1,214 @@
+/* Typekit fonts loaded via HTML link tag */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design Tokens - CSS Custom Properties */
+@layer base {
+  :root {
+    /* Brand Colors - Core Palette */
+    --brand-deep-black: #191919;
+    --brand-black: #1e1e1e;
+    --brand-off-black: #303030;
+    --brand-dark-grey: #6c757d;
+    --brand-mid-grey: #adadad;
+    --brand-light-grey: #f1f1f1;
+    --brand-lighter-grey: #eaeaea;
+    --brand-white: #ffffff;
+    --brand-off-white: #f8f9fa;
+    --brand-blue: #272B5C;
+    --brand-red: #CD1544;
+    --brand-focus: #1e1e1e;
+    --brand-focus-dark: #1e1e1e;
+    
+    /* Cursor-style accent colors */
+    --brand-purple: #a99cf5;
+    --brand-pink: #e394dc;
+    --brand-green: #7eccc8;
+    
+    /* Brand Colors - Special */
+    --brand-badge-bg: #BF9B30;
+    --brand-badge-text: #ffffff;
+    
+    /* Semantic Colors - Light Mode */
+    --surface-primary: var(--brand-white);
+    --surface-secondary: var(--brand-lighter-grey);
+    --surface-tertiary: var(--brand-light-grey);
+    --surface-elevated: var(--brand-white);
+    --surface-muted: var(--brand-off-white);
+    
+    --text-primary: var(--brand-black);
+    --text-secondary: var(--brand-off-black);
+    --text-inverse: var(--brand-white);
+    
+    --border-primary: var(--brand-off-black);
+    --border-light: var(--brand-light-grey);
+    --border-mid-grey: var(--brand-mid-grey);
+    --border-dark-grey: var(--brand-dark-grey);
+    --border-focus: var(--brand-blue);
+    
+    --focus-ring: var(--brand-focus);
+    
+    --status-success: var(--brand-blue);
+    --status-error: var(--brand-red);
+    
+    /* Elevation & Shadows */
+    --elevation-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --elevation-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --elevation-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --elevation-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --elevation-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    
+    /* Spacing Scale */
+    --spacing-px: 1px;        /* 1px - for pixel-perfect borders/gaps */
+    --spacing-xs: 0.25rem;    /* 4px */
+    --spacing-sm: 0.5rem;     /* 8px */
+    --spacing-md: 1rem;       /* 16px */
+    --spacing-lg: 1.5rem;     /* 24px */
+    --spacing-xl: 2rem;       /* 32px */
+    --spacing-2xl: 3rem;      /* 48px */
+    --spacing-3xl: 4rem;      /* 64px */
+    
+    /* Typography Scale */
+    --font-family-primary: "urw-din", "URW DIN", Roboto, sans-serif;
+    --font-family-mono: 'Roboto-Mono', monospace;
+    
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-2xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 1.875rem;  /* 30px */
+    --font-size-4xl: 2.25rem;   /* 36px */
+    --font-size-5xl: 3rem;      /* 48px */
+    
+    /* Border Radius Scale */
+    --radius-none: 0;
+    --radius-sm: 0.125rem;      /* 2px */
+    --radius-md: 0.375rem;      /* 6px */
+    --radius-lg: 0.5rem;        /* 8px */
+    --radius-xl: 0.75rem;       /* 12px */
+    --radius-2xl: 1rem;         /* 16px */
+    --radius-3xl: 1.5rem;       /* 24px */
+    --radius-full: 9999px;
+    
+    /* Animation & Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 250ms ease-in-out;
+    --transition-slow: 350ms ease-in-out;
+  }
+  
+    /* Dark Mode Overrides */
+  .dark {
+    /* Semantic Colors - Dark Mode */
+    --surface-primary: var(--brand-black);
+    --surface-secondary: var(--brand-off-black);
+    --surface-tertiary: var(--brand-dark-grey);
+    --surface-elevated: var(--brand-dark-grey);
+    --surface-muted: var(--brand-deep-black);
+    
+    --text-primary: var(--brand-off-white);
+    --text-secondary: var(--brand-off-white);
+    --text-inverse: var(--brand-black);
+    
+    --border-primary: var(--brand-off-black);
+    --border-focus: var(--brand-blue);
+    --border-light: var(--brand-off-black);
+    --border-mid-grey: var(--brand-off-black);
+    --border-dark-grey: var(--brand-off-white);
+    
+    --focus-ring: var(--brand-focus-dark);
+    
+    /* Dark mode shadows */
+    --elevation-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --elevation-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --elevation-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+    --elevation-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+  }
+  
+  /* Override Tailwind's default border color */
+  *, ::before, ::after {
+    border-color: var(--border-primary);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  .card {
+        @apply bg-surface-elevated rounded-xl shadow-lg border-2 border-light overflow-hidden;
+  }
+  
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-blue to-brand-red bg-clip-text text-transparent;
+  }
+  
+  /* Shimmer gradient for animated badge using design tokens */
+  .shimmer-gradient {
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.3) 40%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0.3) 60%,
+      transparent 70%
+    );
+  }
+  
+  /* Context-specific text colors for components that don't change with light/dark mode */
+  .text-on-dark {
+    @apply text-brand-off-white;
+  }
+  
+  .text-on-dark-secondary {
+    @apply text-brand-off-white opacity-75;
+  }
+  
+  .text-on-light {
+    @apply text-brand-black;
+  }
+  
+  .text-on-light-secondary {
+    @apply text-brand-off-black opacity-75;
+  }
+  
+  .sticky-offset {
+    top: calc(var(--nav-height, 0px) + 1rem);
+  }
+  
+  .animate-shine {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { 
+      left: -100%; 
+      opacity: 0; 
+    }
+    10% { 
+      opacity: 1; 
+    }
+    50% { 
+      left: 100%; 
+      opacity: 1; 
+    }
+    100% { 
+      left: 100%; 
+      opacity: 0; 
+    }
+  }
+}
