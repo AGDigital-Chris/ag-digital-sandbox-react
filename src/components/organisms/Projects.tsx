@@ -33,9 +33,9 @@ const Projects: React.FC = () => {
       featured: false,
     },
     {
-      id: 'portfolio',
-      title: 'Modern Portfolio Site',
-      description: 'Responsive portfolio built with React, TypeScript, and Tailwind CSS using atomic design principles.',
+      id: 'ag-design-system',
+      title: 'AG Design System',
+      description: 'Responsive design system point of reference built with React, TypeScript, and Tailwind CSS using atomic design principles.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS'],
       demoUrl: '#',
       codeUrl: '#',

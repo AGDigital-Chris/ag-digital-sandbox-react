@@ -14,10 +14,13 @@ const Hero: React.FC = () => {
           <div className="space-y-8 animate-fade-in" data-qa="hero--content">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-primary leading-none">
-                Coding Tests & <GradientText>Projects Showcase</GradientText>
+                UI Design & Frontend
+                <div className="flex flex-col">
+                  <span>Development</span><span><GradientText>Showcase</GradientText></span>
+                </div> 
               </h1>
               <p className="text-xl text-secondary leading-tight">
-                Explore my collection of coding challenges, technical implementations, and creative solutions
+                Explore our collection of coding challenges, technical implementations, and creative solutions
               </p>
             </div>
             

@@ -1,6 +1,6 @@
 import React from 'react';
 import type { BaseComponentProps } from '../../types';
-import StatusDot from '../atoms/StatusDot';
+import ListItem from '../atoms/ListItem';
 
 interface SkillListProps extends BaseComponentProps {
   title: string;
@@ -11,12 +11,14 @@ const SkillList: React.FC<SkillListProps> = ({ title, skills, className = '', da
   return (
     <div className={`space-y-4 ${className}`} data-qa={dataQa || 'skill-list'}>
       <h3 className="text-xl font-semibold text-primary">{title}</h3>
-      <ul className="space-y-2">
+      <ul className="space-y-2" data-qa={`${dataQa || 'skill-list'}--items`}>
         {skills.map((skill, idx) => (
-          <li key={idx} className="flex items-center text-secondary">
-            <StatusDot className="mr-3" />
+          <ListItem 
+            key={idx} 
+            dataQa={`skill-list--${skill.toLowerCase().replace(/\s+/g, '-')}`}
+          >
             {skill}
-          </li>
+          </ListItem>
         ))}
       </ul>
     </div>

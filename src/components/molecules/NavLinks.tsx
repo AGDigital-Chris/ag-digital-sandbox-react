@@ -1,5 +1,6 @@
 import React from 'react';
 import type { NavItem } from '../../types';
+import NavLink from '../atoms/NavLink';
 
 interface NavLinksProps {
   items: NavItem[];
@@ -18,26 +19,21 @@ const NavLinks: React.FC<NavLinksProps> = ({
 }) => {
   const containerClasses = isMobile 
     ? `px-2 pt-2 pb-3 space-y-1 sm:px-3 ${className}`
-    : `flex items-baseline space-x-4 ${className}`;
-
-  const linkClasses = isMobile
-    ? 'text-secondary hover:text-brand-blue block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200'
-    : 'text-secondary hover:text-brand-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200';
+    : `flex items-baseline gap-4 ${className}`;
 
   return (
     <div className={containerClasses} data-qa={dataQa || 'nav-links'}>
       {items.map((item, index) => (
-        <a
+        <NavLink
           key={index}
           href={item.href}
-          target={item.external ? '_blank' : undefined}
-          rel={item.external ? 'noopener noreferrer' : undefined}
-          className={linkClasses}
+          external={item.external}
           onClick={onLinkClick}
-          data-qa={`nav-link--${item.href.replace('#', '')}`}
+          variant={isMobile ? 'mobile' : 'desktop'}
+          dataQa={`nav-link--${item.href.replace('#', '')}`}
         >
           {item.label}
-        </a>
+        </NavLink>
       ))}
     </div>
   );
