@@ -41,7 +41,7 @@ const Navigation: React.FC<NavigationProps> = ({ items, className = '' }) => {
             <DarkModeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-secondary hover:text-brand-blue hover:bg-surface-secondary focus:outline-none focus:ring-0 focus:ring-inset focus:ring-brand-focus"
+              className="inline-flex items-center justify-center p-2 rounded-md text-secondary hover:text-brand-primary hover:bg-surface-secondary focus:outline-none focus:ring-0 focus:ring-inset focus:ring-brand-focus"
               data-qa="navigation--mobile-toggle"
             >
               <span className="sr-only">Open main menu</span>

@@ -8,7 +8,7 @@ import CodeWindow from '../molecules/CodeWindow';
 const Hero: React.FC = () => {
   return (
     <QaProvider prefix="hero">
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-surface-primary" data-qa="hero">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-surface-secondary" data-qa="hero">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-20" data-qa="hero--container">
         <div className="grid lg:grid-cols-2 gap-12 items-center" data-qa="hero--grid">
           {/* Content */}
