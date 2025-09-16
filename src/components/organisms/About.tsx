@@ -36,7 +36,7 @@ const About: React.FC = () => {
               size="section"
               dataQa="about--title"
             >
-              About This Showcase
+              About This Sandbox
             </Heading>
             <p className="text-lg text-secondary leading-tight">
               This GitHub Pages test area for AG digital design and frontend development. 

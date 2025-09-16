@@ -32,7 +32,7 @@ const Heading: React.FC<HeadingProps> = ({
   const sizeClasses = {
     hero: 'text-4xl md:text-6xl font-bold leading-none',
     section: 'text-3xl md:text-4xl font-bold leading-none',
-    card: 'text-xl font-semibold leading-tight',
+    card: 'text-2xl font-bold leading-tight',
     subsection: 'text-lg font-semibold',
     small: 'text-base font-medium',
   };

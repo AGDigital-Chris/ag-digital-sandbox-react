@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { Project } from '../../types';
 import BulletCard from '../atoms/BulletCard';
 import Button from '../atoms/Button';
 import Heading from '../atoms/Heading';
 import BadgeList from './BadgeList';
+import ProjectCardPreview from '../organisms/ProjectCardPreview';
 
 interface ProjectCardProps {
   project: Project;
@@ -11,6 +12,12 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = '' }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <BulletCard 
       variant={project.featured ? 'prominent' : 'elevated'} 
@@ -40,11 +47,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = '' }) =>
             {project.description}
           </p>
           
-          {/* Preview */}
+          {/* Read More Toggle */}
           {project.preview && (
-            <div className="relative rounded-md border border-dark p-4" data-qa="project-card--preview">
-              {project.preview}
-            </div>
+            <button
+              onClick={toggleExpanded}
+              className="text-primary border-b border-transparent hover:border-current transition-all duration-200 text-sm font-medium cursor-pointer"
+              data-qa={`project-card--${project.id}-toggle`}
+            >
+              {isExpanded ? 'Read Less' : 'Read More'}
+            </button>
+          )}
+          
+          {/* Preview - Only show when expanded */}
+          {project.preview && isExpanded && (
+            <ProjectCardPreview 
+              preview={project.preview}
+              dataQa={`project-card--${project.id}-preview`}
+            />
           )}
         </div>
         

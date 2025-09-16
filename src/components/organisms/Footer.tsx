@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4" data-qa="footer--brand">
             <h3 className="text-xl font-bold">AG Digital Sandbox</h3>
             <p>
-              A showcase of coding tests and technical implementations by Chris Edwards.
+              A internal reference of UI/UX, coding tests and technical implementations by AG Digital DesignTeam.
             </p>
           </div>
           
@@ -43,8 +43,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-brand-off-black mt-4 pt-4 text-center text-brand-white opacity-75">
-          <p>&copy; 2025 AG Digital Sandbox - Chris Edwards. American Golf.</p>
-          <p>All rights reserved.</p>
+          <p>&copy; 2025 AG Digital Sandbox - American GolfAll rights reserved.</p>
           {/* <p className="mt-2">Hosted on GitHub Pages</p> */}
         </div>
       </div>

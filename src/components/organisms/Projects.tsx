@@ -58,7 +58,7 @@ const Projects: React.FC = () => {
             Featured Projects
           </Heading>
           <p className="text-xl text-secondary max-w-3xl mx-auto">
-            A showcase of coding challenges, technical implementations, and creative solutions
+            A showcase of UI and coding challenges, technical implementations, and creative solutions
           </p>
         </div>
         
