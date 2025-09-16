@@ -1,6 +1,7 @@
 import React from 'react';
 import type { BaseComponentProps } from '../../types';
 import Link from '../atoms/Link';
+import Heading from '../atoms/Heading';
 
 interface LinkItem { label: string; href: string; }
 
@@ -13,7 +14,13 @@ interface LinkListProps extends BaseComponentProps {
 const LinkList: React.FC<LinkListProps> = ({ title, items, context = 'adaptive', className = '', dataQa }) => {
   return (
     <div className={`space-y-4 ${className}`} data-qa={dataQa || 'link-list'}>
-      <h4 className="text-lg font-semibold">{title}</h4>
+      <Heading 
+        level="h4" 
+        size="subsection"
+        dataQa={`${dataQa || 'link-list'}--title`}
+      >
+        {title}
+      </Heading>
       <div className="space-y-2">
         {items.map((item, idx) => (
           <Link 

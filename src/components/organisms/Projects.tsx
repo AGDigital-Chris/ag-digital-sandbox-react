@@ -1,5 +1,6 @@
 import React from 'react';
 import { QaProvider } from '../../qa/qa';
+import Heading from '../atoms/Heading';
 import ProjectCard from '../molecules/ProjectCard';
 import AnimatedBadge from '../atoms/AnimatedBadge';
 import type { Project } from '../../types';
@@ -48,9 +49,14 @@ const Projects: React.FC = () => {
     <section id="projects" className="py-20 bg-surface-primary" data-qa="projects">
       <div className="mx-auto px-4 sm:px-6 lg:px-8" data-qa="projects--container">
         <div className="text-center mb-16" data-qa="projects--header">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary leading-none mb-4">
+          <Heading 
+            level="h2" 
+            size="section"
+            className="mb-4"
+            dataQa="projects--title"
+          >
             Featured Projects
-          </h2>
+          </Heading>
           <p className="text-xl text-secondary max-w-3xl mx-auto">
             A showcase of coding challenges, technical implementations, and creative solutions
           </p>

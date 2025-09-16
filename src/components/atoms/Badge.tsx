@@ -18,9 +18,9 @@ const Badge: React.FC<BadgeProps> = ({
   const baseClasses = 'inline-flex items-center rounded-full font-medium';
   
   const variantClasses = {
-    primary: 'bg-brand-off-black text-brand-white',
+    primary: 'bg-gradient-primary text-brand-white',
     secondary: 'bg-brand-off-black text-brand-white', 
-    success: 'bg-brand-blue text-brand-white',
+    success: 'bg-gradient-primary text-brand-white',
     warning: 'bg-badge-bg text-badge-text',
     error: 'bg-brand-red text-brand-white',
   };

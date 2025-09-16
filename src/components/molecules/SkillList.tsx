@@ -1,6 +1,7 @@
 import React from 'react';
 import type { BaseComponentProps } from '../../types';
 import ListItem from '../atoms/ListItem';
+import Heading from '../atoms/Heading';
 
 interface SkillListProps extends BaseComponentProps {
   title: string;
@@ -10,7 +11,13 @@ interface SkillListProps extends BaseComponentProps {
 const SkillList: React.FC<SkillListProps> = ({ title, skills, className = '', dataQa }) => {
   return (
     <div className={`space-y-4 ${className}`} data-qa={dataQa || 'skill-list'}>
-      <h3 className="text-xl font-semibold text-primary">{title}</h3>
+      <Heading 
+        level="h3" 
+        size="card"
+        dataQa={`${dataQa || 'skill-list'}--title`}
+      >
+        {title}
+      </Heading>
       <ul className="space-y-2" data-qa={`${dataQa || 'skill-list'}--items`}>
         {skills.map((skill, idx) => (
           <ListItem 

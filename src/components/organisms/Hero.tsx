@@ -1,6 +1,7 @@
 import React from 'react';
 import { QaProvider } from '../../qa/qa';
 import GradientText from '../atoms/GradientText';
+import Heading from '../atoms/Heading';
 import HeroCTAGroup from '../molecules/HeroCTAGroup';
 import CodeWindow from '../molecules/CodeWindow';
 
@@ -13,12 +14,16 @@ const Hero: React.FC = () => {
           {/* Content */}
           <div className="space-y-8 animate-fade-in" data-qa="hero--content">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-primary leading-none">
+              <Heading 
+                level="h1" 
+                size="hero"
+                dataQa="hero--title"
+              >
                 UI Design & Frontend
                 <div className="flex flex-col">
                   <span>Development</span><span><GradientText>Showcase</GradientText></span>
                 </div> 
-              </h1>
+              </Heading>
               <p className="text-xl text-secondary leading-tight">
                 Explore our collection of coding challenges, technical implementations, and creative solutions
               </p>

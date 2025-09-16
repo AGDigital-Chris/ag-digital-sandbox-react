@@ -1,5 +1,6 @@
 import React from 'react';
 import BulletCard from '../atoms/BulletCard';
+import Heading from '../atoms/Heading';
 import BadgeList from '../molecules/BadgeList';
 import SkillList from '../molecules/SkillList';
 import type { SkillCategory } from '../../types';
@@ -20,8 +21,8 @@ const About: React.FC = () => {
     { text: 'React', variant: 'primary' as const },
     { text: 'TypeScript', variant: 'primary' as const },
     { text: 'Tailwind CSS', variant: 'primary' as const },
-    { text: 'Atomic Design', variant: 'secondary' as const },
-    { text: 'GitHub Pages', variant: 'secondary' as const },
+    { text: 'Atomic Design', variant: 'primary' as const },
+    { text: 'GitHub Pages', variant: 'primary' as const },
   ];
   
   return (
@@ -30,9 +31,13 @@ const About: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center" data-qa="about--grid">
           {/* Content */}
           <div className="space-y-6" data-qa="about--content">
-            <h2 className="text-3xl md:text-4xl font-bold leading-none text-primary">
+            <Heading 
+              level="h2" 
+              size="section"
+              dataQa="about--title"
+            >
               About This Showcase
-            </h2>
+            </Heading>
             <p className="text-lg text-secondary leading-tight">
               This GitHub Pages test area for AG digital design and frontend development. 
               Built with modern React, TypeScript, and Tailwind CSS using atomic design principles.

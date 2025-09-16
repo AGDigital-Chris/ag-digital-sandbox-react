@@ -153,8 +153,44 @@
 }
 
 @layer utilities {
+  /* Gradient system using design tokens */
+  
+  /* Text gradients */
   .text-gradient {
     @apply bg-gradient-to-r from-brand-blue to-brand-red bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-brand-blue to-brand-red bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-brand-green to-brand-blue bg-clip-text text-transparent;
+  }
+  
+  /* Background gradients */
+  .bg-gradient-primary {
+    @apply bg-gradient-to-r from-brand-blue to-brand-red;
+  }
+  
+  .bg-gradient-secondary {
+    @apply bg-gradient-to-r from-brand-purple to-brand-pink;
+  }
+  
+  .bg-gradient-accent {
+    @apply bg-gradient-to-r from-brand-green to-brand-blue;
+  }
+  
+  .bg-gradient-hero {
+    @apply bg-gradient-to-br from-surface-primary to-surface-secondary;
+  }
+  
+  .bg-gradient-surface {
+    @apply bg-gradient-to-br from-surface-primary to-surface-secondary;
   }
   
   /* Shimmer gradient for animated badge using design tokens */

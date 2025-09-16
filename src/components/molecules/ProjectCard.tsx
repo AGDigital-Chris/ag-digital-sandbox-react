@@ -2,6 +2,7 @@ import React from 'react';
 import type { Project } from '../../types';
 import BulletCard from '../atoms/BulletCard';
 import Button from '../atoms/Button';
+import Heading from '../atoms/Heading';
 import BadgeList from './BadgeList';
 
 interface ProjectCardProps {
@@ -20,9 +21,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = '' }) =>
       <div className="space-y-4">
         {/* Header */}
         <div className="space-y-2" data-qa="project-card--header">
-          <h3 className="text-xl font-semibold text-primary leading-tight">
+          <Heading 
+            level="h3" 
+            size="card"
+            dataQa={`project-card--${project.id}-title`}
+          >
             {project.title}
-          </h3>
+          </Heading>
           <BadgeList 
             badges={project.technologies.map(tech => ({ text: tech, variant: 'primary' as const }))}
             dataQa={`project-card--${project.id}-technologies`}
