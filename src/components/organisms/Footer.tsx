@@ -5,7 +5,7 @@ import LinkList from '../molecules/LinkList';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-black dark:bg-brand-deep-black text-brand-white py-12 border-t border-brand-off-black" data-qa="footer">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-qa="footer--container">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8" data-qa="footer--container">
         <div className="grid md:grid-cols-3 gap-8" data-qa="footer--grid">
           {/* Brand */}
           <div className="space-y-4" data-qa="footer--brand">

@@ -2,7 +2,7 @@ import React from 'react';
 import type { Project } from '../../types';
 import BulletCard from '../atoms/BulletCard';
 import Button from '../atoms/Button';
-import Badge from '../atoms/Badge';
+import BadgeList from './BadgeList';
 
 interface ProjectCardProps {
   project: Project;
@@ -20,21 +20,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = '' }) =>
       <div className="space-y-4">
         {/* Header */}
         <div className="space-y-2" data-qa="project-card--header">
-          <h3 className="text-xl font-bold text-primary leading-tight">
+          <h3 className="text-xl font-semibold text-primary leading-tight">
             {project.title}
           </h3>
-          <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech, index) => (
-              <Badge 
-                key={index} 
-                variant="primary" 
-                size="sm"
-                dataQa={`project-card--${project.id}-tech-${index}`}
-              >
-                {tech}
-              </Badge>
-            ))}
-          </div>
+          <BadgeList 
+            badges={project.technologies.map(tech => ({ text: tech, variant: 'primary' as const }))}
+            dataQa={`project-card--${project.id}-technologies`}
+          />
         </div>
         
         {/* Content */}
@@ -45,7 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = '' }) =>
           
           {/* Preview */}
           {project.preview && (
-            <div className="relative border rounded-lg p-4" data-qa="project-card--preview">
+            <div className="relative rounded-md border border-dark p-4" data-qa="project-card--preview">
               {project.preview}
             </div>
           )}

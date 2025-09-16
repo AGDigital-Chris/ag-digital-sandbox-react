@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
   return (
     <QaProvider prefix="projects">
     <section id="projects" className="py-20 bg-surface-primary" data-qa="projects">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-qa="projects--container">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8" data-qa="projects--container">
         <div className="text-center mb-16" data-qa="projects--header">
           <h2 className="text-3xl md:text-4xl font-bold text-primary leading-none mb-4">
             Featured Projects

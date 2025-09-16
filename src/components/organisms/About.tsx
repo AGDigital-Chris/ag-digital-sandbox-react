@@ -26,7 +26,7 @@ const About: React.FC = () => {
   
   return (
     <section id="about" className="py-20 bg-surface-tertiary" data-qa="about">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-qa="about--container">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8" data-qa="about--container">
         <div className="grid lg:grid-cols-2 gap-12 items-center" data-qa="about--grid">
           {/* Content */}
           <div className="space-y-6" data-qa="about--content">

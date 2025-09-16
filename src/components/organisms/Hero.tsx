@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   return (
     <QaProvider prefix="hero">
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-surface-primary" data-qa="hero">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" data-qa="hero--container">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-20" data-qa="hero--container">
         <div className="grid lg:grid-cols-2 gap-12 items-center" data-qa="hero--grid">
           {/* Content */}
           <div className="space-y-8 animate-fade-in" data-qa="hero--content">
@@ -32,9 +32,9 @@ const Hero: React.FC = () => {
               lines={[
                 <>
                   <span className="text-brand-purple">const</span>{' '}
-                  <span className="text-brand-pink">chris</span>{' '}
+                  <span className="text-brand-pink">agDitialTeam</span>{' '}
                   <span className="text-brand-white">=</span>{' '}
-                  <span className="text-brand-green">'Design + Frontend Development'</span>
+                  <span className="text-brand-green">'Design + UI + Frontend'</span>
                 </>,
                 <>
                   <span className="text-brand-purple">function</span>{' '}

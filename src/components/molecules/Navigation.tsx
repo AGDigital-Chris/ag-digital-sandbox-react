@@ -23,7 +23,7 @@ const Navigation: React.FC<NavigationProps> = ({ items, className = '' }) => {
 
   return (
     <nav ref={ref} className={`bg-surface-primary dark:bg-brand-deep-black border-b border-light ${className}`} data-qa="navigation">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0" data-qa="navigation--brand">
@@ -41,7 +41,7 @@ const Navigation: React.FC<NavigationProps> = ({ items, className = '' }) => {
             <DarkModeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-secondary hover:text-brand-blue hover:bg-surface-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-focus"
+              className="inline-flex items-center justify-center p-2 rounded-md text-secondary hover:text-brand-blue hover:bg-surface-secondary focus:outline-none focus:ring-0 focus:ring-inset focus:ring-brand-focus"
               data-qa="navigation--mobile-toggle"
             >
               <span className="sr-only">Open main menu</span>
