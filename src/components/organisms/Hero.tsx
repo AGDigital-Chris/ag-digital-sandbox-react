@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
                 </>,
                 <>
                   <span className="text-brand-purple">return</span>{' '}
-                  <span className="text-brand-green">'Design + Code'</span>
+                  <span className="text-brand-green">'americangolf.co.uk'</span>
                 </>,
                 <>
                   <span className="text-brand-white">{'}'}</span>

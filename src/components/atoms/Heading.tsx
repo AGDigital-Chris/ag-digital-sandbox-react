@@ -45,13 +45,25 @@ const Heading: React.FC<HeadingProps> = ({
 
   const classes = `${sizeClasses[getSize()]} ${colorClasses[color]} ${className}`;
 
-  const HeadingTag = level as keyof JSX.IntrinsicElements;
+  const renderHeading = () => {
+    const props = {
+      className: classes,
+      'data-qa': dataQa || `heading-${level}`,
+      children
+    };
 
-  return (
-    <HeadingTag className={classes} data-qa={dataQa || `heading-${level}`}>
-      {children}
-    </HeadingTag>
-  );
+    switch (level) {
+      case 'h1': return <h1 {...props} />;
+      case 'h2': return <h2 {...props} />;
+      case 'h3': return <h3 {...props} />;
+      case 'h4': return <h4 {...props} />;
+      case 'h5': return <h5 {...props} />;
+      case 'h6': return <h6 {...props} />;
+      default: return <h1 {...props} />;
+    }
+  };
+
+  return renderHeading();
 };
 
 export default Heading;
